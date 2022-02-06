@@ -1,0 +1,12 @@
+[package]
+name = "measure_air_quality"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = {version = "0.4.19", features = ["serde"]}
+linux-embedded-hal = "0.3.2"
+scd4x = {version = "0.2.1", features = ["scd41"]}
+serde = {version = "1.0.136", features = ["derive"]}
