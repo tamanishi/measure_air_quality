@@ -10,7 +10,7 @@ pub struct Scd41 {
 
 impl Scd41 {
     pub fn new() -> Scd41 {
-        let i2c = I2cdev::new("/dev/i2c-1").expect("Couldn't start i2c.");
+        let i2c = I2cdev::new("/dev/i2c-0").expect("Couldn't start i2c.");
         Scd41 {
             sensor: Scd4x::new(i2c, Delay),
         }
