@@ -14,7 +14,7 @@ impl fmt::Display for AirQuality {
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         write!(
             fmt,
-            "\"datetime\": {:?}, \"co2\": {:.0}, \"temperature\": {:.1}, \"humidity\": {:.1}",
+            "\"datetime\": {:?}, \"co2\": {:.0}, \"temperature\": {:.3}, \"humidity\": {:.3}",
             self.timestamp.format("%Y/%m/%d %H:%M:%S").to_string(),
             self.co2,
             self.temperature,

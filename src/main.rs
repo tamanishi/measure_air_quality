@@ -1,3 +1,5 @@
+use std::process;
+
 mod data;
 mod scd41;
 
@@ -6,9 +8,11 @@ fn main() {
     match scd41.read_single_shot() {
         Ok(data) => {
             println!("{{{}}}", data);
+            process::exit(0);
         }
         Err(e) => {
             println!("{:?}", e);
+            process::exit(1);
         }
     }
 }
